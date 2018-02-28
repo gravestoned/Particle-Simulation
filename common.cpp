@@ -7,6 +7,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include "common.h"
+#include <random>
 
 double size;
 
@@ -49,7 +50,11 @@ void set_size( int n )
 //
 void init_particles( int n, particle_t *p )
 {
-    srand( time( NULL ) );
+
+    /* random init code */
+    std::random_device device;
+    std::mt19937 rnd(device());
+    std::uniform_real_distribution<double> dist(1.0, 100.0);
         
     int sx = (int)ceil(sqrt((double)n));
     int sy = (n+sx-1)/sx;
@@ -63,7 +68,7 @@ void init_particles( int n, particle_t *p )
         //
         //  make sure particles are not spatially sorted
         //
-        int j = rand()%(n-i);
+        int j = (int) dist(rnd)%(n-i);
         int k = shuffle[j];
         shuffle[j] = shuffle[n-i-1];
         
@@ -76,8 +81,8 @@ void init_particles( int n, particle_t *p )
         //
         //  assign random velocities within a bound
         //
-        p[i].vx = rand()*2-1;
-        p[i].vy = rand()*2-1;
+        p[i].vx = dist(rnd)*2-1;
+        p[i].vy = dist(rnd)*2-1;
     }
     free( shuffle );
 }
