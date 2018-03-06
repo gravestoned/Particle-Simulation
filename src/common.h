@@ -15,11 +15,12 @@ inline int min( int a, int b ) { return a < b ? a : b; }
 inline int max( int a, int b ) { return a > b ? a : b; }
 
 //
-//  saving parameters
+//  parameters
 //
 const int NSTEPS = 1000;
 const int SAVEFREQ = 10;
-
+const int DEF_SPEED = 1;
+const int DEF_SIZE = 4;
 //
 // particle data structure
 //
@@ -29,6 +30,18 @@ class ParticleMatrix;
 typedef struct
 {
     double x;
+    double y;
+    double vx;
+    double vy;
+    double ax;
+    double ay;
+} particle_t;
+
+//
+//  timing routines
+//
+double read_timer( );
+
 //
 //  simulation routines
 //
@@ -42,6 +55,7 @@ void copy_particle( particle_t *src, particle_t *dst);
 //
 
 void save( FILE *f, int n, particle_t *p );
+std::string working_dir();
 
 //
 //  argument processing routines
@@ -49,5 +63,11 @@ void save( FILE *f, int n, particle_t *p );
 int find_option( int argc, char **argv, const char *option );
 int read_int( int argc, char **argv, const char *option, int default_value );
 char *read_string( int argc, char **argv, const char *option, char *default_value );
+
+//
+// Visualizer
+//
+
+void run_visualizer(char *);
 
 #endif

@@ -1,6 +1,7 @@
 #include "common.h"
+#include "windows.h"
 
-double size;
+double size = DEF_SIZE;
 
 //
 //  tuned constants
@@ -48,7 +49,7 @@ void copy_particle(particle_t * src, particle_t * dst) {
 //
 void set_size( int n )
 {
-    size = 4; //sqrt( density * n );
+    size = n; //sqrt( density * n );
 }
 
 //
@@ -115,9 +116,7 @@ void apply_force( particle_t &particle, particle_t &neighbor )
     double testy = particle.ay;
     particle.ax += coef * dx;
     particle.ay += coef * dy;
-    if (testx == particle.ax && testy == particle.ay && &neighbor != &particle) {
-        printf("asdsa");
-    }
+
 }
 
 //
@@ -164,6 +163,12 @@ void save( FILE *f, int n, particle_t *p )
         fprintf( f, "%g %g\n", p[i].x, p[i].y );
 }
 
+std::string working_dir() {
+    char buf[256];
+    GetCurrentDirectoryA(256, buf);
+    return std::string(buf) + "\\";
+}
+
 //
 //  command line option processing
 //
@@ -189,4 +194,17 @@ char *read_string( int argc, char **argv, const char *option, char *default_valu
     if( iplace >= 0 && iplace < argc-1 )
         return argv[iplace+1];
     return default_value;
+}
+
+//
+// Start visualizer
+//
+
+void run_visualizer(char * filename) {
+    /* build path to program and savefile */
+    std::string path = working_dir();
+    std::string arg = path + filename;
+    path.replace(path.length()-18, 18, "util\\visualize.exe");
+
+    ShellExecute(NULL, "open", path.c_str(), arg.c_str(), NULL, SW_SHOWDEFAULT);
 }
