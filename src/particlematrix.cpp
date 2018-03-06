@@ -7,7 +7,6 @@ ParticleMatrix::ParticleMatrix(int n) {
     particles = new particle_t[nof_particles];
     particle_storage = new particle_t[nof_particles];
 
-    set_size(nof_particles);
     init_particles(nof_particles, particles);
 
     particle_storage = new particle_t[nof_particles];

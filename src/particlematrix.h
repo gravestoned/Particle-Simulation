@@ -1,7 +1,7 @@
 #ifndef PARTICLEMATRIX_H
 #define PARTICLEMATRIX_H
 
-#include "common.h"
+#include "particles.h"
 
 class ParticleMatrix {
     particle_t * particles;             /* main particle matrix */

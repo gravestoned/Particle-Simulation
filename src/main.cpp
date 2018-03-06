@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "common.h"
 #include "particlematrix.h"
 
@@ -34,7 +32,6 @@ int main( int argc, char **argv )
 
     FILE *fsave = savename ? fopen( savename, "w" ) : NULL;
 
-
     set_size(size);
 
     ParticleMatrix matrix (n);
@@ -56,8 +53,9 @@ int main( int argc, char **argv )
         //
         //  save if necessary
         //
-        if( fsave && (step%SAVEFREQ) == 0) {}
-            save( fsave, n, matrix.get_particles() );
+        if( fsave && (step%SAVEFREQ) == 0) {
+            save(fsave, n, matrix.get_particles(), size);
+        }
     }
     simulation_time = read_timer( ) - simulation_time;
 
