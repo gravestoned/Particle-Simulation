@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <unistd.h>
+=======
+#include <stdlib.h>
+#include <stdio.h>
+>>>>>>> parent of 2cb548e... Refactored and organized further
 =======
 #include <stdlib.h>
 #include <stdio.h>
@@ -59,9 +64,14 @@ int main( int argc, char **argv )
         //  save if necessary
         //
 <<<<<<< HEAD
+<<<<<<< HEAD
         if( fsave && (step%save_frequency) == 0) {
             save(fsave, n, matrix.get_particles(), size);
         }
+=======
+        if( fsave && (step%SAVEFREQ) == 0) {}
+            save( fsave, n, matrix.get_particles() );
+>>>>>>> parent of 2cb548e... Refactored and organized further
 =======
         if( fsave && (step%SAVEFREQ) == 0) {}
             save( fsave, n, matrix.get_particles() );

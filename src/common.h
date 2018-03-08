@@ -39,6 +39,9 @@ typedef struct
     double ax;
     double ay;
 } particle_t;
+<<<<<<< HEAD
+>>>>>>> parent of 2cb548e... Refactored and organized further
+=======
 >>>>>>> parent of 2cb548e... Refactored and organized further
 
 //
