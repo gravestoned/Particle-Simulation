@@ -14,6 +14,9 @@ ParticleMatrix::ParticleMatrix(int n, int s) {
 
     set_size(nof_particles);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2cb548e... Refactored and organized further
+=======
 >>>>>>> parent of 2cb548e... Refactored and organized further
 =======
 >>>>>>> parent of 2cb548e... Refactored and organized further

@@ -3,10 +3,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "particles.h"
 #include <vector>
 
 #define NOF_SLICES 10
+=======
+#include "common.h"
+>>>>>>> parent of 2cb548e... Refactored and organized further
 =======
 #include "common.h"
 >>>>>>> parent of 2cb548e... Refactored and organized further
