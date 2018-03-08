@@ -8,18 +8,6 @@ ParticleMatrix::ParticleMatrix(int n, int s) {
     size = s;
 
     particles = new particle_t[nof_particles];
-<<<<<<< HEAD
-=======
-    particle_storage = new particle_t[nof_particles];
-
-    set_size(nof_particles);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 2cb548e... Refactored and organized further
-=======
->>>>>>> parent of 2cb548e... Refactored and organized further
-=======
->>>>>>> parent of 2cb548e... Refactored and organized further
     init_particles(nof_particles, particles);
 }
 
@@ -46,16 +34,17 @@ void ParticleMatrix::index_particles(particle_matrix_t & particle_matrix) {
 }
 void ParticleMatrix::collision_check(particle_matrix_t & particle_matrix) {
 
+#pragma omp parallel for
     for (int slice = 0; slice < NOF_SLICES; slice++) {
         int start = ((slice > 0) ? (slice - 1) : slice);
         int end = ((slice < nof_slices - 1) ? (slice + 2) : (slice + 1));
 
-        for (auto curr_particle = particle_matrix[slice].begin(); curr_particle != particle_matrix[slice].end(); curr_particle++ ) {
-            (**curr_particle).ax = (**curr_particle).ay = 0;
+        for (particle_t * curr_particle: particle_matrix[slice]) {
+            (*curr_particle).ax = (*curr_particle).ay = 0;
 
             for (int j = start; j < end; j++) {
-                for (auto neigh_particle = particle_matrix[j].begin(); neigh_particle != particle_matrix[j].end(); neigh_particle++ ) {
-                    apply_force((**curr_particle), (**neigh_particle));
+                for (particle_t * neigh_particle: particle_matrix[j]) {
+                    apply_force((*curr_particle), (*neigh_particle));
                 }
             }
         }
