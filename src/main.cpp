@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #include <unistd.h>
+=======
+#include <stdlib.h>
+#include <stdio.h>
+>>>>>>> parent of 2cb548e... Refactored and organized further
 #include "common.h"
 #include "particlematrix.h"
 
@@ -31,6 +36,7 @@ int main( int argc, char **argv )
     int save_frequency = read_int( argc, argv, "-sf", SAVEFREQ);
     FILE *fsave = savename ? fopen( savename, "w" ) : NULL;
 
+
     set_size(size);
 
     ParticleMatrix matrix (n, size);
@@ -52,9 +58,14 @@ int main( int argc, char **argv )
         //
         //  save if necessary
         //
+<<<<<<< HEAD
         if( fsave && (step%save_frequency) == 0) {
             save(fsave, n, matrix.get_particles(), size);
         }
+=======
+        if( fsave && (step%SAVEFREQ) == 0) {}
+            save( fsave, n, matrix.get_particles() );
+>>>>>>> parent of 2cb548e... Refactored and organized further
     }
     simulation_time = read_timer( ) - simulation_time;
 

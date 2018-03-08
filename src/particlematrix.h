@@ -1,10 +1,14 @@
 #ifndef PARTICLEMATRIX_H
 #define PARTICLEMATRIX_H
 
+<<<<<<< HEAD
 #include "particles.h"
 #include <vector>
 
 #define NOF_SLICES 10
+=======
+#include "common.h"
+>>>>>>> parent of 2cb548e... Refactored and organized further
 
 class ParticleMatrix {
     particle_t * particles;             /* main particle matrix */

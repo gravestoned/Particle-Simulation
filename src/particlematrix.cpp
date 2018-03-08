@@ -8,6 +8,12 @@ ParticleMatrix::ParticleMatrix(int n, int s) {
     size = s;
 
     particles = new particle_t[nof_particles];
+<<<<<<< HEAD
+=======
+    particle_storage = new particle_t[nof_particles];
+
+    set_size(nof_particles);
+>>>>>>> parent of 2cb548e... Refactored and organized further
     init_particles(nof_particles, particles);
 }
 
