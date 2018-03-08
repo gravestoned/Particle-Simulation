@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "E:\CLion 2017.3.2\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "E:\CLion 2017.3.2\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\chris\CLionProjects\project
+CMAKE_SOURCE_DIR = D:\dev\Particle-Simulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\chris\CLionProjects\project\cmake-build-debug
+CMAKE_BINARY_DIR = D:\dev\Particle-Simulation\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = C:\Users\chris\CLionProjects\project\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"E:\CLion 2017.3.2\bin\cmake\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"E:\CLion 2017.3.2\bin\cmake\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\chris\CLionProjects\project\cmake-build-debug\CMakeFiles C:\Users\chris\CLionProjects\project\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\chris\CLionProjects\project\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,14 +109,148 @@ depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+#=============================================================================
+# Target rules for targets named Project
+
+# Build rule for target.
+Project: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 Project
+.PHONY : Project
+
+# fast build rule for target.
+Project/fast:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/build
+.PHONY : Project/fast
+
+src/common.obj: src/common.cpp.obj
+
+.PHONY : src/common.obj
+
+# target to build an object file
+src/common.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/common.cpp.obj
+.PHONY : src/common.cpp.obj
+
+src/common.i: src/common.cpp.i
+
+.PHONY : src/common.i
+
+# target to preprocess a source file
+src/common.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/common.cpp.i
+.PHONY : src/common.cpp.i
+
+src/common.s: src/common.cpp.s
+
+.PHONY : src/common.s
+
+# target to generate assembly for a file
+src/common.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/common.cpp.s
+.PHONY : src/common.cpp.s
+
+src/main.obj: src/main.cpp.obj
+
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/particlematrix.obj: src/particlematrix.cpp.obj
+
+.PHONY : src/particlematrix.obj
+
+# target to build an object file
+src/particlematrix.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particlematrix.cpp.obj
+.PHONY : src/particlematrix.cpp.obj
+
+src/particlematrix.i: src/particlematrix.cpp.i
+
+.PHONY : src/particlematrix.i
+
+# target to preprocess a source file
+src/particlematrix.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particlematrix.cpp.i
+.PHONY : src/particlematrix.cpp.i
+
+src/particlematrix.s: src/particlematrix.cpp.s
+
+.PHONY : src/particlematrix.s
+
+# target to generate assembly for a file
+src/particlematrix.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particlematrix.cpp.s
+.PHONY : src/particlematrix.cpp.s
+
+src/particles.obj: src/particles.cpp.obj
+
+.PHONY : src/particles.obj
+
+# target to build an object file
+src/particles.cpp.obj:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particles.cpp.obj
+.PHONY : src/particles.cpp.obj
+
+src/particles.i: src/particles.cpp.i
+
+.PHONY : src/particles.i
+
+# target to preprocess a source file
+src/particles.cpp.i:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particles.cpp.i
+.PHONY : src/particles.cpp.i
+
+src/particles.s: src/particles.cpp.s
+
+.PHONY : src/particles.s
+
+# target to generate assembly for a file
+src/particles.cpp.s:
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particles.cpp.s
+.PHONY : src/particles.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
+	@echo ... Project
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/common.obj
+	@echo ... src/common.i
+	@echo ... src/common.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/particlematrix.obj
+	@echo ... src/particlematrix.i
+	@echo ... src/particlematrix.s
+	@echo ... src/particles.obj
+	@echo ... src/particles.i
+	@echo ... src/particles.s
 .PHONY : help
 
 

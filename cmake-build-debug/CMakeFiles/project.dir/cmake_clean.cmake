@@ -1,13 +1,15 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/project.dir/main.cpp.obj"
-  "CMakeFiles/project.dir/common.cpp.obj"
-  "project.pdb"
-  "project.exe"
-  "project.exe.manifest"
-  "libproject.dll.a"
+  "CMakeFiles/Project.dir/src/common.cpp.obj"
+  "CMakeFiles/Project.dir/src/main.cpp.obj"
+  "CMakeFiles/Project.dir/src/particlematrix.cpp.obj"
+  "CMakeFiles/Project.dir/src/particles.cpp.obj"
+  "Project.pdb"
+  "Project.exe"
+  "Project.exe.manifest"
+  "libProject.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/project.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/Project.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

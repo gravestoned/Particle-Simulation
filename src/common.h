@@ -11,7 +11,7 @@
 const int NSTEPS = 1000;
 const int SAVEFREQ = 10;
 const int DEF_SPEED = 1;
-const int DEF_SIZE = 4;
+const int DEF_SIZE = 5;
 
 //
 //  timing routines

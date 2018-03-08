@@ -33,109 +33,163 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe"
+CMAKE_COMMAND = "E:\CLion 2017.3.2\bin\cmake\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2017.3.3\bin\cmake\bin\cmake.exe" -E remove -f
+RM = "E:\CLion 2017.3.2\bin\cmake\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\chris\CLionProjects\project
+CMAKE_SOURCE_DIR = D:\dev\Particle-Simulation
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\chris\CLionProjects\project\cmake-build-debug
+CMAKE_BINARY_DIR = D:\dev\Particle-Simulation\cmake-build-debug
 
 # Include any dependencies generated for this target.
-include CMakeFiles/project.dir/depend.make
+include CMakeFiles/Project.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/project.dir/progress.make
+include CMakeFiles/Project.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/project.dir/flags.make
+include CMakeFiles/Project.dir/flags.make
 
-CMakeFiles/project.dir/main.cpp.obj: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\chris\CLionProjects\project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/main.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project.dir\main.cpp.obj -c C:\Users\chris\CLionProjects\project\main.cpp
+CMakeFiles/Project.dir/src/common.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/src/common.cpp.obj: ../src/common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project.dir/src/common.cpp.obj"
+	C:\TDM-GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\common.cpp.obj -c D:\dev\Particle-Simulation\src\common.cpp
 
-CMakeFiles/project.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/main.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\chris\CLionProjects\project\main.cpp > CMakeFiles\project.dir\main.cpp.i
+CMakeFiles/Project.dir/src/common.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/common.cpp.i"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\Particle-Simulation\src\common.cpp > CMakeFiles\Project.dir\src\common.cpp.i
 
-CMakeFiles/project.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/main.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\chris\CLionProjects\project\main.cpp -o CMakeFiles\project.dir\main.cpp.s
+CMakeFiles/Project.dir/src/common.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/common.cpp.s"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\Particle-Simulation\src\common.cpp -o CMakeFiles\Project.dir\src\common.cpp.s
 
-CMakeFiles/project.dir/main.cpp.obj.requires:
+CMakeFiles/Project.dir/src/common.cpp.obj.requires:
 
-.PHONY : CMakeFiles/project.dir/main.cpp.obj.requires
+.PHONY : CMakeFiles/Project.dir/src/common.cpp.obj.requires
 
-CMakeFiles/project.dir/main.cpp.obj.provides: CMakeFiles/project.dir/main.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/main.cpp.obj.provides.build
-.PHONY : CMakeFiles/project.dir/main.cpp.obj.provides
+CMakeFiles/Project.dir/src/common.cpp.obj.provides: CMakeFiles/Project.dir/src/common.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/common.cpp.obj.provides.build
+.PHONY : CMakeFiles/Project.dir/src/common.cpp.obj.provides
 
-CMakeFiles/project.dir/main.cpp.obj.provides.build: CMakeFiles/project.dir/main.cpp.obj
-
-
-CMakeFiles/project.dir/common.cpp.obj: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/common.cpp.obj: ../common.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\chris\CLionProjects\project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/project.dir/common.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\project.dir\common.cpp.obj -c C:\Users\chris\CLionProjects\project\common.cpp
-
-CMakeFiles/project.dir/common.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/project.dir/common.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\chris\CLionProjects\project\common.cpp > CMakeFiles\project.dir\common.cpp.i
-
-CMakeFiles/project.dir/common.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/project.dir/common.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-7~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\chris\CLionProjects\project\common.cpp -o CMakeFiles\project.dir\common.cpp.s
-
-CMakeFiles/project.dir/common.cpp.obj.requires:
-
-.PHONY : CMakeFiles/project.dir/common.cpp.obj.requires
-
-CMakeFiles/project.dir/common.cpp.obj.provides: CMakeFiles/project.dir/common.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\project.dir\build.make CMakeFiles/project.dir/common.cpp.obj.provides.build
-.PHONY : CMakeFiles/project.dir/common.cpp.obj.provides
-
-CMakeFiles/project.dir/common.cpp.obj.provides.build: CMakeFiles/project.dir/common.cpp.obj
+CMakeFiles/Project.dir/src/common.cpp.obj.provides.build: CMakeFiles/Project.dir/src/common.cpp.obj
 
 
-# Object files for target project
-project_OBJECTS = \
-"CMakeFiles/project.dir/main.cpp.obj" \
-"CMakeFiles/project.dir/common.cpp.obj"
+CMakeFiles/Project.dir/src/main.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/src/main.cpp.obj: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project.dir/src/main.cpp.obj"
+	C:\TDM-GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\main.cpp.obj -c D:\dev\Particle-Simulation\src\main.cpp
 
-# External object files for target project
-project_EXTERNAL_OBJECTS =
+CMakeFiles/Project.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/main.cpp.i"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\Particle-Simulation\src\main.cpp > CMakeFiles\Project.dir\src\main.cpp.i
 
-project.exe: CMakeFiles/project.dir/main.cpp.obj
-project.exe: CMakeFiles/project.dir/common.cpp.obj
-project.exe: CMakeFiles/project.dir/build.make
-project.exe: CMakeFiles/project.dir/linklibs.rsp
-project.exe: CMakeFiles/project.dir/objects1.rsp
-project.exe: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\chris\CLionProjects\project\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable project.exe"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\project.dir\link.txt --verbose=$(VERBOSE)
+CMakeFiles/Project.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/main.cpp.s"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\Particle-Simulation\src\main.cpp -o CMakeFiles\Project.dir\src\main.cpp.s
+
+CMakeFiles/Project.dir/src/main.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Project.dir/src/main.cpp.obj.requires
+
+CMakeFiles/Project.dir/src/main.cpp.obj.provides: CMakeFiles/Project.dir/src/main.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/main.cpp.obj.provides.build
+.PHONY : CMakeFiles/Project.dir/src/main.cpp.obj.provides
+
+CMakeFiles/Project.dir/src/main.cpp.obj.provides.build: CMakeFiles/Project.dir/src/main.cpp.obj
+
+
+CMakeFiles/Project.dir/src/particlematrix.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/src/particlematrix.cpp.obj: ../src/particlematrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project.dir/src/particlematrix.cpp.obj"
+	C:\TDM-GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\particlematrix.cpp.obj -c D:\dev\Particle-Simulation\src\particlematrix.cpp
+
+CMakeFiles/Project.dir/src/particlematrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/particlematrix.cpp.i"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\Particle-Simulation\src\particlematrix.cpp > CMakeFiles\Project.dir\src\particlematrix.cpp.i
+
+CMakeFiles/Project.dir/src/particlematrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/particlematrix.cpp.s"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\Particle-Simulation\src\particlematrix.cpp -o CMakeFiles\Project.dir\src\particlematrix.cpp.s
+
+CMakeFiles/Project.dir/src/particlematrix.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Project.dir/src/particlematrix.cpp.obj.requires
+
+CMakeFiles/Project.dir/src/particlematrix.cpp.obj.provides: CMakeFiles/Project.dir/src/particlematrix.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particlematrix.cpp.obj.provides.build
+.PHONY : CMakeFiles/Project.dir/src/particlematrix.cpp.obj.provides
+
+CMakeFiles/Project.dir/src/particlematrix.cpp.obj.provides.build: CMakeFiles/Project.dir/src/particlematrix.cpp.obj
+
+
+CMakeFiles/Project.dir/src/particles.cpp.obj: CMakeFiles/Project.dir/flags.make
+CMakeFiles/Project.dir/src/particles.cpp.obj: ../src/particles.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project.dir/src/particles.cpp.obj"
+	C:\TDM-GCC\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\particles.cpp.obj -c D:\dev\Particle-Simulation\src\particles.cpp
+
+CMakeFiles/Project.dir/src/particles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/particles.cpp.i"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\dev\Particle-Simulation\src\particles.cpp > CMakeFiles\Project.dir\src\particles.cpp.i
+
+CMakeFiles/Project.dir/src/particles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/particles.cpp.s"
+	C:\TDM-GCC\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\dev\Particle-Simulation\src\particles.cpp -o CMakeFiles\Project.dir\src\particles.cpp.s
+
+CMakeFiles/Project.dir/src/particles.cpp.obj.requires:
+
+.PHONY : CMakeFiles/Project.dir/src/particles.cpp.obj.requires
+
+CMakeFiles/Project.dir/src/particles.cpp.obj.provides: CMakeFiles/Project.dir/src/particles.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/particles.cpp.obj.provides.build
+.PHONY : CMakeFiles/Project.dir/src/particles.cpp.obj.provides
+
+CMakeFiles/Project.dir/src/particles.cpp.obj.provides.build: CMakeFiles/Project.dir/src/particles.cpp.obj
+
+
+# Object files for target Project
+Project_OBJECTS = \
+"CMakeFiles/Project.dir/src/common.cpp.obj" \
+"CMakeFiles/Project.dir/src/main.cpp.obj" \
+"CMakeFiles/Project.dir/src/particlematrix.cpp.obj" \
+"CMakeFiles/Project.dir/src/particles.cpp.obj"
+
+# External object files for target Project
+Project_EXTERNAL_OBJECTS =
+
+Project.exe: CMakeFiles/Project.dir/src/common.cpp.obj
+Project.exe: CMakeFiles/Project.dir/src/main.cpp.obj
+Project.exe: CMakeFiles/Project.dir/src/particlematrix.cpp.obj
+Project.exe: CMakeFiles/Project.dir/src/particles.cpp.obj
+Project.exe: CMakeFiles/Project.dir/build.make
+Project.exe: CMakeFiles/Project.dir/linklibs.rsp
+Project.exe: CMakeFiles/Project.dir/objects1.rsp
+Project.exe: CMakeFiles/Project.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Project.exe"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/project.dir/build: project.exe
+CMakeFiles/Project.dir/build: Project.exe
 
-.PHONY : CMakeFiles/project.dir/build
+.PHONY : CMakeFiles/Project.dir/build
 
-CMakeFiles/project.dir/requires: CMakeFiles/project.dir/main.cpp.obj.requires
-CMakeFiles/project.dir/requires: CMakeFiles/project.dir/common.cpp.obj.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/common.cpp.obj.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/main.cpp.obj.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/particlematrix.cpp.obj.requires
+CMakeFiles/Project.dir/requires: CMakeFiles/Project.dir/src/particles.cpp.obj.requires
 
-.PHONY : CMakeFiles/project.dir/requires
+.PHONY : CMakeFiles/Project.dir/requires
 
-CMakeFiles/project.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles\project.dir\cmake_clean.cmake
-.PHONY : CMakeFiles/project.dir/clean
+CMakeFiles/Project.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles\Project.dir\cmake_clean.cmake
+.PHONY : CMakeFiles/Project.dir/clean
 
-CMakeFiles/project.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\chris\CLionProjects\project C:\Users\chris\CLionProjects\project C:\Users\chris\CLionProjects\project\cmake-build-debug C:\Users\chris\CLionProjects\project\cmake-build-debug C:\Users\chris\CLionProjects\project\cmake-build-debug\CMakeFiles\project.dir\DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/project.dir/depend
+CMakeFiles/Project.dir/depend:
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\dev\Particle-Simulation D:\dev\Particle-Simulation D:\dev\Particle-Simulation\cmake-build-debug D:\dev\Particle-Simulation\cmake-build-debug D:\dev\Particle-Simulation\cmake-build-debug\CMakeFiles\Project.dir\DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/Project.dir/depend
 
