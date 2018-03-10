@@ -41,11 +41,15 @@ cmath
 -
 particlematrix.h
 /cygdrive/d/dev/Particle-Simulation/src/particlematrix.h
+omp.h
+-
 
 /cygdrive/d/dev/Particle-Simulation/src/particlematrix.h
 particles.h
 /cygdrive/d/dev/Particle-Simulation/src/particles.h
 vector
+-
+omp.h
 -
 
 /cygdrive/d/dev/Particle-Simulation/src/particles.cpp

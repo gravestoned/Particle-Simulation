@@ -1,6 +1,11 @@
 #include <cstdio>
 #include <cmath>
 #include "particlematrix.h"
+#include <omp.h>
+
+double i_start, i_end, i_total = 0;
+double c_start, c_end, c_total = 0;
+double m_start, m_end, m_total = 0;
 
 ParticleMatrix::ParticleMatrix(int n) {
     nof_particles = n;
@@ -9,28 +14,21 @@ ParticleMatrix::ParticleMatrix(int n) {
     size = sqrt(0.0005 * n);
 
     set_size(n);
-
-    particle_matrix.resize(nof_slices);
-
+    particle_matrix = new particle_vector_t[nof_slices];
     particles = new particle_t[nof_particles];
     init_particles(nof_particles, particles);
 }
 
 void ParticleMatrix::index_particles() {
 
-    particle_matrix.clear();
-    particle_matrix.resize(nof_slices);
+    for (int i = 0; i < nof_slices; i++) {
+        particle_matrix[i].clear();
+    }
 
     for (int i = 0; i < nof_particles; i++) {
-        auto curr_particle_slice = (particles[i].x*ceil(nof_slices/size));
+        int curr_particle_slice = (particles[i].x*floor(nof_slices/size));
 
-        if (curr_particle_slice >= nof_slices) {
-            curr_particle_slice = nof_slices-1;
-        } else if (curr_particle_slice < 0) {
-            curr_particle_slice = 0;
-        }
-
-        particle_matrix[curr_particle_slice].push_back(&particles[i]);
+        particle_matrix[curr_particle_slice].emplace_back(&particles[i]);
     }
 
 }
@@ -49,19 +47,34 @@ void ParticleMatrix::collision_check() {
             }
         }
     }
+
+
 }
 
 void ParticleMatrix::perform_step() {
+    i_start = omp_get_wtime();
     index_particles();
+    i_end = omp_get_wtime();
 
+    i_total += i_end - i_start;
+
+    c_start = omp_get_wtime();
     collision_check();
+    c_end = omp_get_wtime();
 
+    c_total += c_end - c_start;
+
+    m_start = omp_get_wtime();
     for (int i = 0; i < nof_particles; i++) {
         move(particles[i]);
     }
+    m_end = omp_get_wtime();
 
+    m_total += m_end - m_start;
 }
-
+void ParticleMatrix::print(){
+    printf("i time: %f, c time: %f, m time: %f", i_total, c_total, m_total);
+}
 particle_t * ParticleMatrix::get_particles() {
     return particles;
 }
