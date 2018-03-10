@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Path to a program.
-CMAKE_AR:FILEPATH=C:/TDM-GCC/bin/ar.exe
-
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
 CMAKE_BUILD_TYPE:STRING=Debug
@@ -61,17 +58,6 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Libraries linked by default with all C++ applications.
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
-//C compiler
-CMAKE_C_COMPILER:FILEPATH=C:/TDM-GCC/bin/gcc.exe
-
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=C:/TDM-GCC/bin/gcc-ar.exe
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=C:/TDM-GCC/bin/gcc-ranlib.exe
-
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
 
@@ -110,10 +96,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Project
-
-//Path to a program.
-CMAKE_LINKER:FILEPATH=C:/TDM-GCC/bin/ld.exe
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Particle_Simulation
 
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=C:/TDM-GCC/bin/mingw32-make.exe
@@ -145,9 +128,6 @@ CMAKE_OBJDUMP:FILEPATH=C:/TDM-GCC/bin/objdump.exe
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Particle_Simulation
 
-//Path to a program.
-CMAKE_RANLIB:FILEPATH=C:/TDM-GCC/bin/ranlib.exe
-
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=C:/TDM-GCC/bin/windres.exe
 
@@ -169,7 +149,7 @@ CMAKE_RC_FLAGS_RELEASE:STRING=
 CMAKE_RC_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_SH:FILEPATH=CMAKE_SH-NOTFOUND
+CMAKE_SH:FILEPATH=E:/cygwin/bin/sh.exe
 
 //Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -223,19 +203,11 @@ Particle_Simulation_BINARY_DIR:STATIC=D:/dev/Particle-Simulation/cmake-build-deb
 //Value Computed by CMake
 Particle_Simulation_SOURCE_DIR:STATIC=D:/dev/Particle-Simulation
 
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=D:/dev/Particle-Simulation/cmake-build-debug
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=D:/dev/Particle-Simulation
-
 
 ########################
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: CMAKE_AR
-CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=d:/dev/Particle-Simulation/cmake-build-debug
 //Major version of cmake used to create the current loaded cache
@@ -270,12 +242,6 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_STANDARD_LIBRARIES
 CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER
-CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_AR
-CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
-CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -319,10 +285,6 @@ CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=D:/dev/Particle-Simulation
-//ADVANCED property for variable: CMAKE_LINKER
-CMAKE_LINKER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_MAKE_PROGRAM
-CMAKE_MAKE_PROGRAM-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS
 CMAKE_MODULE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MODULE_LINKER_FLAGS_DEBUG
@@ -343,8 +305,6 @@ CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_RANLIB
-CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_COMPILER
 CMAKE_RC_COMPILER-ADVANCED:INTERNAL=1
 CMAKE_RC_COMPILER_WORKS:INTERNAL=1
@@ -360,8 +320,6 @@ CMAKE_RC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_RC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9
-//ADVANCED property for variable: CMAKE_SH
-CMAKE_SH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG

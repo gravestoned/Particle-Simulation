@@ -26,7 +26,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9/Modules/Compiler/GNU-C.cmake"
   "E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9/Modules/Compiler/GNU-CXX.cmake"
   "E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9/Modules/Compiler/GNU.cmake"
-  "E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9/Modules/Platform/Windows-GNU-C.cmake"
   "E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
   "E:/CLion 2017.3.2/bin/cmake/share/cmake-3.9/Modules/Platform/Windows-GNU-CXX.cmake"
