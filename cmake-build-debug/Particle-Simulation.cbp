@@ -95,12 +95,6 @@
 		<Unit filename="/cygdrive/d/dev/Particle-Simulation/src/particlematrix.h">
 			<Option target="Particle-Simulation"/>
 		</Unit>
-		<Unit filename="/cygdrive/d/dev/Particle-Simulation/src/particles.cpp">
-			<Option target="Particle-Simulation"/>
-		</Unit>
-		<Unit filename="/cygdrive/d/dev/Particle-Simulation/src/particles.h">
-			<Option target="Particle-Simulation"/>
-		</Unit>
 		<Unit filename="/cygdrive/d/dev/Particle-Simulation/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

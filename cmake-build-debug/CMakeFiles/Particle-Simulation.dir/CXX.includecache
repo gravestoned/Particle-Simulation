@@ -9,8 +9,6 @@
 /cygdrive/d/dev/Particle-Simulation/src/common.cpp
 common.h
 /cygdrive/d/dev/Particle-Simulation/src/common.h
-time.h
--
 string.h
 -
 sys/time.h
@@ -19,16 +17,14 @@ cmath
 -
 windows.h
 /cygdrive/d/dev/Particle-Simulation/src/windows.h
+random
+-
 
 /cygdrive/d/dev/Particle-Simulation/src/common.h
-particles.h
-/cygdrive/d/dev/Particle-Simulation/src/particles.h
 iostream
 -
 
 /cygdrive/d/dev/Particle-Simulation/src/main.cpp
-unistd.h
--
 common.h
 /cygdrive/d/dev/Particle-Simulation/src/common.h
 particlematrix.h
@@ -41,22 +37,10 @@ cmath
 -
 particlematrix.h
 /cygdrive/d/dev/Particle-Simulation/src/particlematrix.h
-omp.h
--
 
 /cygdrive/d/dev/Particle-Simulation/src/particlematrix.h
-particles.h
-/cygdrive/d/dev/Particle-Simulation/src/particles.h
+common.h
+/cygdrive/d/dev/Particle-Simulation/src/common.h
 vector
 -
-omp.h
--
-
-/cygdrive/d/dev/Particle-Simulation/src/particles.cpp
-random
--
-particles.h
-/cygdrive/d/dev/Particle-Simulation/src/particles.h
-
-/cygdrive/d/dev/Particle-Simulation/src/particles.h
 

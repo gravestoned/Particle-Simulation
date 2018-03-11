@@ -1,11 +1,11 @@
 #include <cstdio>
 #include <cmath>
 #include "particlematrix.h"
-#include <omp.h>
 
-double i_start, i_end, i_total = 0;
-double c_start, c_end, c_total = 0;
-double m_start, m_end, m_total = 0;
+double i_start, i_total = 0;
+double c_start, c_total = 0;
+double m_start, m_total = 0;
+double s_start, s_total = 0;
 
 ParticleMatrix::ParticleMatrix(int n) {
     nof_particles = n;
@@ -13,7 +13,6 @@ ParticleMatrix::ParticleMatrix(int n) {
 
     size = sqrt(0.0005 * n);
 
-    set_size(n);
     particle_matrix = new particle_vector_t[nof_slices];
     particles = new particle_t[nof_particles];
     init_particles(nof_particles, particles);
@@ -51,30 +50,32 @@ void ParticleMatrix::collision_check() {
 
 }
 
-void ParticleMatrix::perform_step() {
-    i_start = omp_get_wtime();
-    index_particles();
-    i_end = omp_get_wtime();
+void ParticleMatrix::perform_steps(int n, bool perform_save) {
 
-    i_total += i_end - i_start;
+    for (int steps = 0; steps < n; steps++) {
+        i_start = read_timer( );
+        index_particles();
+        i_total += read_timer( ) - i_start;
 
-    c_start = omp_get_wtime();
-    collision_check();
-    c_end = omp_get_wtime();
+        c_start = read_timer( );
+        collision_check();
+        c_total += read_timer( ) - c_start;
 
-    c_total += c_end - c_start;
+        m_start = read_timer( );
+        for (int i = 0; i < nof_particles; i++) {
+            move(particles[i]);
+        }
+        m_total += read_timer( ) - m_start;
 
-    m_start = omp_get_wtime();
-    for (int i = 0; i < nof_particles; i++) {
-        move(particles[i]);
+        if(perform_save) {
+            s_start = read_timer( );
+            save(particles);
+
+            s_total += read_timer( ) - s_start;
+        }
     }
-    m_end = omp_get_wtime();
 
-    m_total += m_end - m_start;
 }
 void ParticleMatrix::print(){
-    printf("i time: %f, c time: %f, m time: %f", i_total, c_total, m_total);
-}
-particle_t * ParticleMatrix::get_particles() {
-    return particles;
+    printf("i time: %f, c time: %f, m time: %f, save_time: %f\n", i_total, c_total, m_total, s_total);
 }
